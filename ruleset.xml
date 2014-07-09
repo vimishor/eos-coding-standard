@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<ruleset name="eOS">
+    <description>elementaryOS.org coding standard.</description>
+
+    <!-- We should never check "cache" directories and 3rd party code -->
+    <exclude-pattern>*/cache/*</exclude-pattern>
+    <exclude-pattern>*/third_party/*</exclude-pattern>
+    <exclude-pattern>*/system/*</exclude-pattern>
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+
+    <!-- Include all sniffs in the PEAR standard and customize later -->
+    <rule ref="PEAR">
+        <exclude name="PEAR.Functions.FunctionDeclaration"/>
+        <exclude name="PEAR.Functions.FunctionCallSignature"/>
+        <exclude name="Generic.PHP.DisallowShortOpenTag"/>
+    </rule>
+
+    <!--
+        Function declaration:
+
+            - Function declarations should use egyptian style brackets.
+            - There should be an empty line before a function declaration.
+    -->
+    <rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie"/>
+    <rule ref="Squiz.WhiteSpace.FunctionSpacing">
+        <properties>
+            <property name="spacing" value="1"/>
+        </properties>
+    </rule>
+
+
+    <!--
+        Function calling:
+
+            - Function should be called with a space between the function
+            name and opening parenthesis.
+
+        @see Functions/FunctionCallSignatureSniff
+    -->
+
+
+    <!--
+        Arrays:
+
+            - Array should be declared using square brackets instead of
+            "array" keyword.
+
+        @see Arrays/ArrayDeclarationSniff
+    -->
+
+
+    <!--
+        Short open tags:
+
+            - Using <?= ?> is fine (and recommended for the templating stuff).
+            - Using <? ?> is never fine.
+
+        @see: PHP/DisallowShortOpenTagSniff
+    -->
+</ruleset>
