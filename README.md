@@ -18,6 +18,14 @@ $ pear install PHP_CodeSniffer
 $ git clone https://github.com/vimishor/eos-coding-standard.git `pear config-get php_dir`/PHP/CodeSniffer/Standards/eOS
 ```
 
+## Update
+
+Assuming that you installed the standard by cloning the repository, you can update it by running:
+
+```bash
+$ cd `pear config-get php_dir`/PHP/CodeSniffer/Standards/eOS && git pull && cd -
+```
+
 ## Usage
 
 ```bash
