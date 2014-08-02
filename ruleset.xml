@@ -13,6 +13,8 @@
         <exclude name="PEAR.Functions.FunctionDeclaration"/>
         <exclude name="PEAR.Functions.FunctionCallSignature"/>
         <exclude name="Generic.PHP.DisallowShortOpenTag"/>
+        <exclude name="PEAR.Commenting.FileComment"/>
+        <exclude name="PEAR.Commenting.ClassComment"/>
     </rule>
 
     <!--
