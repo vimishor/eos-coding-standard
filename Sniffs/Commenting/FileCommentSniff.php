@@ -26,12 +26,12 @@ class eOS_Sniffs_Commenting_FileCommentSniff extends PEAR_Sniffs_Commenting_File
      */
     protected $tags = array(
         'category'   => array(
-            'required'       => true,
+            'required'       => false,
             'allow_multiple' => false,
             'order_text'     => 'precedes @package',
         ),
         'package'    => array(
-            'required'       => true,
+            'required'       => false,
             'allow_multiple' => false,
             'order_text'     => 'follows @category',
         ),
